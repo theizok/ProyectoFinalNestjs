@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ProyectoFinalNestjs
 Proyecto Biblioteca 
 
@@ -42,3 +43,4 @@ En la carpeta raiz del repositorio se encuentra el archivo con la colección de 
 ### Autor
 
 Isaac Ramirez
+=======
