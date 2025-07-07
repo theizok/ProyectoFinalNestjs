@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ProyectoFinalNestjs
 Proyecto Biblioteca 
 
