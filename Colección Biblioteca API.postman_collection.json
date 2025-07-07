@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "4c69c3c9-4ed3-4fa6-8dfc-394e1aca0f82",
+		"name": "Colección Biblioteca API",
+		"description": "Colección para probar la API de la Biblioteca (Autor, Libro, Usuario, Prestamo, Editorial)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39826922"
+	},
+	"item": [
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Create Autor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"\",\n  \"age\": \"\"\n}"
+						},
+						"url": "{{base_url}}/autor"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/autor"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Autor",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"\",\n  \"age\": \"\"\n}"
+						},
+						"url": "{{base_url}}/autor/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/autor/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Libro",
+			"item": [
+				{
+					"name": "Create Libro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Las aventuras magicas de aurelion sol\",\n  \"releasedAt\": \"2025-07-07T00:00:00.000Z\",\n  \"avaliable\": true\n}"
+						},
+						"url": "{{base_url}}/libro"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Libro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/libro"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Libro",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Las aventuras magicas de aurelion sol\",\n  \"releasedAt\": \"2025-07-07T00:00:00.000Z\",\n  \"avaliable\": true\n}"
+						},
+						"url": "{{base_url}}/libro/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/libro/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Create Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Pepito Perez\",\n  \"document\": \"123456789\"\n}"
+						},
+						"url": "{{base_url}}/usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Usuario",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Manolo Perez\",\n  \"document\": \"77777777\"\n}"
+						},
+						"url": "{{base_url}}/usuario/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/usuario/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prestamo",
+			"item": [
+				{
+					"name": "Create Prestamo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"startedAt\": \"2025-07-07T00:00:00.000Z\",\n  \"endedAt\": null,\n  \"usuarioId\": 2, //Id de usuario existente\n  \"libroId\": 2 //Id de libro existente\n}"
+						},
+						"url": "{{base_url}}/prestamo"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Prestamo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/prestamo"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Prestamo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"startedAt\": \"2025-07-08T00:00:00.000Z\",\n  \"endedAt\": \"2025-07-10T00:00:00.000Z\",\n  \"usuarioId\": 2, //Id de usuario existente\n  \"libroId\": 2 //Id de libro existente\n}\n"
+						},
+						"url": "{{base_url}}/prestamo/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Prestamo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/prestamo/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Editorial",
+			"item": [
+				{
+					"name": "Create Editorial",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Panamericana\",\n  \"address\": \"Calle 12 # 34 - 30, Bogotá D.C\"\n}"
+						},
+						"url": "{{base_url}}/editorial"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Editorial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/editorial"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Editorial",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Norma\",\n  \"address\": \"Calle Luna 123\"\n}"
+						},
+						"url": "{{base_url}}/editorial/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Editorial",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/editorial/"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
