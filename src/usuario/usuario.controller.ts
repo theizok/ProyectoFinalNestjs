@@ -7,6 +7,7 @@ import {
   Patch,
   Param,
   Delete,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { UsuarioService } from './usuario.service';
 import { CreateUsuarioDto, UsuarioDto } from './dto/create-usuario.dto';
@@ -28,12 +29,15 @@ export class UsuarioController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUsuarioDto: CreateUsuarioDto) {
+  update(
+    @Param('id', ParseIntPipe) id: string,
+    @Body() updateUsuarioDto: CreateUsuarioDto,
+  ) {
     return this.usuarioService.update(+id, updateUsuarioDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.usuarioService.remove(+id);
   }
 }

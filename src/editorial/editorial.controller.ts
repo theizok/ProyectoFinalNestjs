@@ -7,6 +7,7 @@ import {
   Patch,
   Param,
   Delete,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { EditorialService } from './editorial.service';
 import { CreateEditorialDto, EditorialDto } from './dto/create-editorial.dto';
@@ -29,14 +30,14 @@ export class EditorialController {
 
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id', ParseIntPipe) id: string,
     @Body() updateEditorialDto: CreateEditorialDto,
   ) {
     return this.editorialService.update(+id, updateEditorialDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.editorialService.remove(+id);
   }
 }

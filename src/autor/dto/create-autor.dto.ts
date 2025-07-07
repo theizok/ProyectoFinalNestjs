@@ -15,7 +15,7 @@ export class CreateAutorDto {
 }
 
 export class AutorDto extends CreateAutorDto {
-  @Exclude()
+  @Expose()
   id: number;
 
   @IsOptional()

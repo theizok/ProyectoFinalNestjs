@@ -7,6 +7,7 @@ import {
   Patch,
   Param,
   Delete,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { LibroService } from './libro.service';
 import { CreateLibroDto, LibroDto } from './dto/create-libro.dto';
@@ -28,12 +29,15 @@ export class LibroController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateLibroDto: CreateLibroDto) {
+  update(
+    @Param('id', ParseIntPipe) id: string,
+    @Body() updateLibroDto: CreateLibroDto,
+  ) {
     return this.libroService.update(+id, updateLibroDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.libroService.remove(+id);
   }
 }
