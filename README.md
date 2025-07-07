@@ -25,10 +25,15 @@ npm install
 Crea un archivo .env en la raíz del proyecto con la configuración de la base de datos:
 
 DB_HOST=localhost
+
 DB_PORT=3306
+
 DB_USERNAME=root
+
 DB_PASSWORD=tu_contraseña
+
 DB_DATABASE=biblioteca
+
 PORT=3000
 
 Ademas de esto deberas crear la base de datos con el mismo nombre que tienes en el archivo de configuración para que el proyecto funcione correctamente. 
