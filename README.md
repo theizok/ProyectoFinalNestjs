@@ -37,8 +37,7 @@ Ademas de esto deberas crear la base de datos con el mismo nombre que tienes en 
 npm run start:dev
 
 ### Colección de Postman
-
-https://.postman.co/workspace/My-Workspace~62278b8b-7214-4aef-84d2-dd1ba6d5da01/collection/39826922-4c69c3c9-4ed3-4fa6-8dfc-394e1aca0f82?action=share&creator=39826922
+En la carpeta raiz del repositorio se encuentra el archivo con la colección de postman para probar los endpoints de las entidades.
 
 ### Autor
 
