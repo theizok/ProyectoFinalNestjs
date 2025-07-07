@@ -22,7 +22,7 @@ Dirigirse al directorio clonado
 npm install
 
 ### 3. Configura el entorno
-Crea un archivo .env en la raíz del proyecto con la configuración de la base de datos:
+Modifica el archivo .env en la raíz del proyecto con la configuración de la base de datos:
 
 DB_HOST=localhost
 
