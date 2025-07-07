@@ -40,6 +40,7 @@ Ademas de esto deberas crear la base de datos con el mismo nombre que tienes en 
 
 npm run start:dev
 
+
 ### 🏗 Estructura General
 
 src/
